@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.01) 2px,
+            rgba(0, 0, 0, 0.01) 4px
+        );
+    position: relative;
+    padding: 60px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Watercolor droplets - Top Left */
+.watercolor-top-left {
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 400px;
+    height: 400px;
+    background: 
+        radial-gradient(ellipse at 25% 25%, rgba(135, 206, 250, 0.5) 0%, rgba(135, 206, 250, 0.3) 25%, transparent 60%),
+        radial-gradient(ellipse at 60% 40%, rgba(100, 149, 237, 0.4) 0%, rgba(100, 149, 237, 0.2) 30%, transparent 65%),
+        radial-gradient(ellipse at 40% 60%, rgba(173, 216, 230, 0.35) 0%, transparent 55%);
+    border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
+    filter: blur(25px);
+    opacity: 0.7;
+    transform: rotate(-15deg);
+}
+
+.watercolor-top-left::before {
+    content: '';
+    position: absolute;
+    top: 120px;
+    left: 140px;
+    width: 180px;
+    height: 160px;
+    background: 
+        radial-gradient(ellipse, rgba(176, 224, 230, 0.45) 0%, rgba(176, 224, 230, 0.25) 40%, transparent 75%),
+        radial-gradient(ellipse at 70% 30%, rgba(135, 206, 250, 0.3) 0%, transparent 60%);
+    border-radius: 50% 40% 60% 30% / 45% 55% 50% 45%;
+    filter: blur(20px);
+    transform: rotate(20deg);
+}
+
+.watercolor-top-left::after {
+    content: '';
+    position: absolute;
+    top: 200px;
+    left: 60px;
+    width: 140px;
+    height: 120px;
+    background: 
+        radial-gradient(ellipse, rgba(173, 216, 230, 0.4) 0%, rgba(173, 216, 230, 0.2) 35%, transparent 70%),
+        radial-gradient(ellipse at 30% 70%, rgba(176, 196, 222, 0.3) 0%, transparent 55%);
+    border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+    filter: blur(18px);
+    transform: rotate(-25deg);
+}
+
+/* Watercolor droplets - Bottom Right */
+.watercolor-bottom-right {
+    position: absolute;
+    bottom: -70px;
+    right: -70px;
+    width: 380px;
+    height: 380px;
+    background: 
+        radial-gradient(ellipse at 75% 75%, rgba(135, 206, 250, 0.45) 0%, rgba(135, 206, 250, 0.25) 30%, transparent 65%),
+        radial-gradient(ellipse at 40% 60%, rgba(100, 149, 237, 0.35) 0%, rgba(100, 149, 237, 0.15) 35%, transparent 70%),
+        radial-gradient(ellipse at 80% 40%, rgba(173, 216, 230, 0.3) 0%, transparent 60%);
+    border-radius: 55% 45% 50% 50% / 45% 55% 50% 50%;
+    filter: blur(22px);
+    opacity: 0.65;
+    transform: rotate(20deg);
+}
+
+.watercolor-bottom-right::before {
+    content: '';
+    position: absolute;
+    bottom: 90px;
+    right: 120px;
+    width: 160px;
+    height: 140px;
+    background: 
+        radial-gradient(ellipse, rgba(176, 224, 230, 0.4) 0%, rgba(176, 224, 230, 0.2) 40%, transparent 75%),
+        radial-gradient(ellipse at 30% 70%, rgba(135, 206, 250, 0.3) 0%, transparent 65%);
+    border-radius: 40% 60% 50% 50% / 55% 45% 55% 45%;
+    filter: blur(18px);
+    transform: rotate(-15deg);
+}
+
+.watercolor-bottom-right::after {
+    content: '';
+    position: absolute;
+    bottom: 160px;
+    right: 50px;
+    width: 120px;
+    height: 110px;
+    background: 
+        radial-gradient(ellipse, rgba(173, 216, 230, 0.35) 0%, rgba(173, 216, 230, 0.18) 35%, transparent 70%),
+        radial-gradient(ellipse at 70% 30%, rgba(176, 196, 222, 0.25) 0%, transparent 60%);
+    border-radius: 50% 50% 60% 40% / 50% 50% 45% 55%;
+    filter: blur(15px);
+    transform: rotate(25deg);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.love-message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.from-jesus {
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    font-weight: 500;
+    color: #4A90E2;
+    margin-bottom: 0;
+}
+
+/* Bible Verse Section */
+.bible-verse {
+    color: #3a3a3a;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 300;
+}
+
+.bible-reference {
+    color: #3a3a3a;
+    font-size: 16px;
+    margin-bottom: 40px;
+    text-align: left;
+    font-weight: 400;
+}
+
+/* Invitation Section */
+.invitation-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.invitation-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    color: #2c2c2c;
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: 600;
+}
+
+.church-info {
+    margin-bottom: 35px;
+}
+
+.church-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 12px;
+}
+
+.church-location {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.service-times {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.service-time-item {
+    margin-left: 20px;
+    margin-bottom: 4px;
+}
+
+.church-contact {
+    font-size: 15px;
+    color: #666;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.church-website {
+    font-size: 15px;
+    color: #4A90E2;
+    margin-top: 8px;
+    text-decoration: none;
+}
+
+.church-website:hover {
+    text-decoration: underline;
+}
+
+.church-note {
+    font-size: 14px;
+    color: #4A90E2;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    .card {
+        box-shadow: none;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .card {
+        padding: 40px 25px;
+    }
+    .love-message {
+        font-size: 36px;
+    }
+    .from-jesus {
+        font-size: 30px;
+    }
+    .bible-verse {
+        font-size: 16px;
+    }
+    .invitation-title {
+        font-size: 28px;
+    }
+}
